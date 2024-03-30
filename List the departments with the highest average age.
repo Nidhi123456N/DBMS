@@ -1,0 +1,6 @@
+SELECT d.DepartmentName, AVG(DATEDIFF(CURRENT_DATE(), e.DateOfBirth) / 365.25) AS AverageAge
+FROM Departments d
+LEFT JOIN Employees e ON d.DepartmentID = e.DepartmentID
+GROUP BY d.DepartmentID
+ORDER BY AverageAge DESC
+LIMIT 1;
