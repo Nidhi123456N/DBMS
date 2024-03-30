@@ -1,0 +1,6 @@
+SELECT d.DepartmentName
+FROM Departments d
+LEFT JOIN Employees e ON d.DepartmentID = e.DepartmentID
+WHERE e.Gender = 'Male'
+GROUP BY d.DepartmentName
+HAVING COUNT(*) > 2;
