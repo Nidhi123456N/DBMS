@@ -1,0 +1,4 @@
+SELECT Position, COUNT(*) AS TotalEmployees
+FROM Employees
+GROUP BY Position
+HAVING COUNT(*) > 2;
