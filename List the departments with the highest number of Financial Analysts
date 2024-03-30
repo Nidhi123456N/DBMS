@@ -1,0 +1,6 @@
+SELECT d.DepartmentName, COUNT(*) AS FinancialAnalystCount
+FROM Departments d
+LEFT JOIN Employees e ON d.DepartmentID = e.DepartmentID
+WHERE e.Position = 'Financial Analyst'
+GROUP BY d.DepartmentID
+ORDER BY FinancialAnalystCount DESC;
