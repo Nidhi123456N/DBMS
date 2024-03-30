@@ -1,0 +1,4 @@
+SELECT Position
+FROM Employees
+GROUP BY Position
+HAVING COUNT(CASE WHEN Gender = 'Male' THEN 1 END) > COUNT(CASE WHEN Gender = 'Female' THEN 1 END);
