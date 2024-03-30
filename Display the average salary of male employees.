@@ -1,0 +1,3 @@
+SELECT AVG(Salary) AS AverageSalaryMale
+FROM Employees
+WHERE Gender = 'Male';
