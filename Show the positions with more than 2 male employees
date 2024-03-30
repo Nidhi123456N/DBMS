@@ -1,0 +1,5 @@
+SELECT Position
+FROM Employees
+WHERE Gender = 'Male'
+GROUP BY Position
+HAVING COUNT(*) > 2;
