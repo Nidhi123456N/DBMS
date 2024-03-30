@@ -1,0 +1,6 @@
+SELECT d.DepartmentName
+FROM Departments d
+LEFT JOIN Employees e ON d.DepartmentID = e.DepartmentID
+WHERE e.Gender = 'Female'
+GROUP BY d.DepartmentID
+HAVING COUNT(CASE WHEN e.Gender = 'Female' THEN 1 END) > COUNT(CASE WHEN e.Gender = 'Male' THEN 1 END);
