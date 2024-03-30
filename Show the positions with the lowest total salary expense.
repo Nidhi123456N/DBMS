@@ -1,0 +1,5 @@
+SELECT Position, SUM(Salary) AS TotalSalaryExpense
+FROM Employees
+GROUP BY Position
+ORDER BY TotalSalaryExpense ASC
+LIMIT 1;
