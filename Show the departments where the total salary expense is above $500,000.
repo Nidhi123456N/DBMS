@@ -1,0 +1,5 @@
+SELECT d.DepartmentName, SUM(e.Salary) AS TotalSalaryExpense
+FROM Departments d
+LEFT JOIN Employees e ON d.DepartmentID = e.DepartmentID
+GROUP BY d.DepartmentID
+HAVING SUM(e.Salary) > 500000;
