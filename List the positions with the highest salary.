@@ -1,0 +1,3 @@
+SELECT Position, MAX(Salary) AS HighestSalary
+FROM Employees
+GROUP BY Position;
