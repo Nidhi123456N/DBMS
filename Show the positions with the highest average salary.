@@ -1,0 +1,4 @@
+SELECT Position, AVG(Salary) AS AverageSalary
+FROM Employees
+GROUP BY Position
+ORDER BY AverageSalary DESC;
