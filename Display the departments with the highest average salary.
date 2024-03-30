@@ -1,0 +1,6 @@
+SELECT d.DepartmentName, AVG(e.Salary) AS AverageSalary
+FROM Departments d
+LEFT JOIN Employees e ON d.DepartmentID = e.DepartmentID
+GROUP BY d.DepartmentID
+ORDER BY AverageSalary DESC
+LIMIT 1;
