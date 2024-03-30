@@ -1,0 +1,15 @@
+CREATE TABLE Employees (
+    EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Gender ENUM('Male', 'Female') NOT NULL,
+    DateOfBirth DATE NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Phone VARCHAR(15),
+    Address VARCHAR(255),
+    DepartmentID INT,
+    Position VARCHAR(100),
+    HireDate DATE,
+    Salary DECIMAL(10, 2),
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
