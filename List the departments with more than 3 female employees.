@@ -1,0 +1,6 @@
+SELECT d.DepartmentName, COUNT(e.EmployeeID) AS FemaleEmployeesCount
+FROM Departments d
+LEFT JOIN Employees e ON d.DepartmentID = e.DepartmentID
+WHERE e.Gender = 'Female'
+GROUP BY d.DepartmentID
+HAVING COUNT(e.EmployeeID) > 3;
