@@ -1,0 +1,4 @@
+SELECT Position
+FROM Employees
+GROUP BY Position
+HAVING AVG(DATEDIFF(CURRENT_DATE(), DateOfBirth) / 365.25) < 35;
