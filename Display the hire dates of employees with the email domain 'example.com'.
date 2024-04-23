@@ -1,0 +1,40 @@
+CREATE TABLE Employees (
+    EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Gender ENUM('Male', 'Female') NOT NULL,
+    DateOfBirth DATE NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Phone VARCHAR(15),
+    Address VARCHAR(255),
+    Department VARCHAR(20),
+    Position VARCHAR(100),
+    HireDate YEAR,
+    Salary DECIMAL(10, 2)
+);
+
+-- Insert records into Employees table
+INSERT INTO Employees (FirstName, LastName, Gender, DateOfBirth, Email, Phone, Address, Department, Position, HireDate, Salary) VALUES
+('John', 'Doe', 'Male', '1990-05-15', 'john.doe@example.com', '123-456-7890', '123 Main St, City', 'HR', 'HR Manager', 2015, 65000.00),
+('Jane', 'Smith', 'Female', '1992-08-20', 'jane.smith@example.com', '234-567-8901', '456 Elm St, Town', 'Finance', 'Financial Analyst', '2016', 60000.00),
+('Michael', 'Johnson', 'Male', '1988-11-10', 'michael.johnson@example.com', '345-678-9012', '789 Oak St, Village', 'IT', 'Systems Administrator', '2017', 70000.00),
+('Emily', 'Williams', 'Female', '1991-03-25', 'emily.williams@example.com', '456-789-0123', '987 Pine St, County', 'Marketing', 'Marketing Coordinator', '2018', 55000.00),
+('David', 'Brown', 'Male', '1985-09-12', 'david.brown@example.com', '567-890-1234', '654 Maple St, State', 'HR', 'HR Assistant', '2019', 45000.00),
+('Sarah', 'Jones', 'Female', '1987-12-30', 'sarah.jones@example.com', '678-901-2345', '321 Cedar St, Province','Finance' , 'Financial Planner', '2020', 75000.00),
+('Christopher', 'Garcia', 'Male', '1993-06-18', 'christopher.garcia@example.com', '789-012-3456', '135 Birch St, Country', 'IT', 'Network Engineer', '2021', 80000.00),
+('Jessica', 'Martinez', 'Female', '1989-04-05', 'jessica.martinez@example.com', '890-123-4567', '246 Fir St, Kingdom','Marketing' , 'Marketing Manager', '2022', 90000.00),
+('Daniel', 'Rodriguez', 'Male', '1990-10-22', 'daniel.rodriguez@example.com', '901-234-5678', '357 Pine St, Republic', 'HR', 'HR Specialist', '2016', 60000.00),
+('Jennifer', 'Hernandez', 'Female', '1986-07-17', 'jennifer.hernandez@example.com', '012-345-6789', '468 Maple St, Territory', 'Finance', 'Financial Advisor', '2017', 65000.00),
+('James', 'Lopez', 'Male', '1984-02-14', 'james.lopez@example.com', '123-456-7890', '579 Cedar St, Dominion', 'IT', 'Database Administrator', '2018', 70000.00),
+('Amanda', 'Gonzalez', 'Female', '1988-11-08', 'amanda.gonzalez@example.com', '234-567-8901', '684 Elm St, Commonwealth', 'Marketing', 'Marketing Assistant', '2019', 50000.00),
+('Robert', 'Wilson', 'Male', '1991-05-31', 'robert.wilson@example.com', '345-678-9012', '789 Oak St, Federation', 'HR', 'HR Coordinator', '2020', 55000.00),
+('Ashley', 'Perez', 'Female', '1987-03-20', 'ashley.perez@example.com', '456-789-0123', '987 Pine St, Union', 'Finance', 'Financial Analyst', '2021', 60000.00),
+('Michael', 'Rivera', 'Male', '1983-09-18', 'michael.rivera@example.com', '567-890-1234', '654 Maple St, Confederation', 'IT', 'Systems Engineer', '2022', 75000.00),
+('Mary', 'Roberts', 'Female', '1992-12-12', 'mary.roberts@example.com', '678-901-2345', '321 Cedar St, League', 'Marketing', 'Marketing Director', '2016', 85000.00),
+('Christopher', 'Cook', 'Male', '1986-06-29', 'christopher.cook@example.com', '789-012-3456', '135 Birch St, Coalition', 'HR', 'HR Manager', '2017', 65000.00),
+('Jessica', 'Morales', 'Female', '1990-08-25', 'jessica.morales@example.com', '890-123-4567', '246 Fir St, State', 'Finance', 'Financial Analyst', '2018', 70000.00),
+('Matthew', 'Murphy', 'Male', '1984-04-17', 'matthew.murphy@example.com', '901-234-5678', '357 Pine St, Province', 'IT', 'Systems Analyst', '2019', 60000.00),
+('Sarah', 'Young', 'Female', '1988-10-08', 'sarah.young@example.com', '012-345-6789', '468 Maple St, Kingdom', 'Marketing','Marketing Coordinator', '2020', 55000.00),
+('David', 'King', 'Male', '1993-03-22', 'david.king@example.com', '123-456-7890', '579 Cedar St, Republic', 'HR', 'HR Specialist', '2021', 70000.00),
+('Nicole', 'Lee', 'Female', '1989-07-11', 'nicole.lee@example.com', '234-567-8901', '287 Birch St, Coalition', 'IT', 'Systems Analyst', '2019', 60000.00);
+SELECT HireDate FROM Employees WHERE Email LIKE '%@example.com';
